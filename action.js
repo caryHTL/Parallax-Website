@@ -49,11 +49,11 @@ window.addEventListener('scroll', function () {
         splash.style.top = 20 + value * -0.3 + 'px';
     }
 
-    //Move fishes horizontally
-    fish1.style.right = (value - 100) * 1 + 'px';
-    fish2.style.left = (value - fish2move) * 1 + 'px';
-    fish3.style.right = (value - fish3move) * 1 + 'px';
-    fish4.style.left = (value - fish4move) * 1 + 'px';
+    //Move fishes vertically from bottom to top with staggered start positions
+    fish1.style.transform = `translateY(${Math.max(0, value - 100) * -0.4}px)`;
+    fish2.style.transform = `translateY(${Math.max(0, value - fish2move) * -0.4}px)`;
+    fish3.style.transform = `translateY(${Math.max(0, value - fish3move) * -0.45}px)`;
+    fish4.style.transform = `translateY(${Math.max(0, value - fish4move) * -0.5}px)`;
 })
 
 
